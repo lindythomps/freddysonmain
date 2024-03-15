@@ -28,6 +28,8 @@
 .flex-container {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .card-container {
@@ -82,21 +84,23 @@ main p {
 }
 
 /* ************ header ************ */
-
-header section {  
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100vw;
+header {
+    background-color: white;
 }
 
-.logo {
+.site-id {
+    margin: 0 auto;
+    width: 35%;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.logo {  
     text-align: center;
     font-family: 'rahayuregular';
     color: var(--charcoal);
     font-size: 1.75rem;
-    width: 20rem;
-    padding: 1rem;
 }
 
 .logo img:last-of-type {
@@ -493,9 +497,9 @@ footer a:hover {
     }
 
     .site-id {
+        width: 30%;
         position: absolute;
-        top: 0;
-        z-index: 50;
+        left: 35%;
     }
 
     header nav {
@@ -506,22 +510,17 @@ footer a:hover {
         position: static;
         max-height: unset;
         overflow: visible;
-        margin: 0 auto;
-        width: 98%;
+        padding: 2.5rem 1% 0 1%;
     }
 
     header nav ul {
         display: flex;
-        width: calc(100% / 2 - 15rem);
+        width: 34%;
         justify-content: space-between;
     }
 
-    header nav li {
-        width: calc(100% / 3 - 2rem);
-    }
-
     header nav ul a {
-        padding: 4rem 1rem 1rem 1rem;
+        padding: 1rem;
         line-height: 2;
         text-align: center;
     }
@@ -578,9 +577,11 @@ footer a:hover {
 
 @media screen and (min-width: 960px) {
     .site-id {
-        top: 7.5rem;
-        padding-top: 2rem;
+        top: 7rem;
+        left: 2%;
         z-index: 50;
+        display: flex;
+        width: 96%;
     }
     
     .logo img:first-of-type {
@@ -590,31 +591,30 @@ footer a:hover {
         display: block;
     }
     .logo {
-        width: 25rem;
         color: #f6e3d7;
         font-size: 2.5rem;
+        width: 30%;
+        padding: 1rem 3rem 1rem 3rem;
     }
 
-    /* .site-id {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-evenly;
+    .logo span {
+        margin-top: 1rem;
     }
 
-    .site-id div {
-        background-color: gold;
-        width: 40vw;
+    .horizontal-line {
         height: 2px;
+        background-color: #d3b15f;
+        border-radius: 15%;
+        width: 35%;
         z-index: 100;
-    } */
+    }
 
     .banner {
         width: 90%;
         margin: 0 auto 7.5rem auto;
     }
     .banner p {
-        margin-top: 10%;
+        margin-top: 3.75rem;
         margin-right: 0;
         padding: 4.5rem 20% 3rem 2rem;
         font-size: 1.8rem;
@@ -637,3 +637,54 @@ footer a:hover {
 @media screen and (min-width: 1440px) {
     
 }
+
+/* -- Code for the Cookie Compliance popover window -- */
+
+#cookiePopup {
+    background-color: #ffffff;
+    position: absolute;
+    left: 7.5%;
+    bottom: 0;
+    font-size: 14px;
+    width: 85%;
+    box-shadow: 0 0 2em rgba(5, 0, 31, 0.15);
+    font-family: "Poppins", sans-serif;
+    text-align: justify;
+    line-height: 1.8em;
+    margin: 0 auto;
+    padding: 3rem 1.4rem 2rem 1.4rem;
+    border-radius: 6px;
+    transition: all 0.5s ease-in-out;
+  }
+  
+  #cookiePopup p {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  #cookiePopup button {
+    background-color: var(--charcoal);
+    border: none;
+    color: #ffffff;
+    font-size: 1.2em;
+    padding: 1.25rem 2rem;
+    display: block;
+    position: relative;
+    margin: auto;
+    border-radius: 5px;
+  }
+  #cookiePopup button:hover,
+  #cookiePopup a:hover {
+    text-decoration: underline;
+  }
+  #cookiePopup a {
+    color: rgb(152, 0, 240);
+  }
+  
+  .hide {
+    visibility: hidden;
+  }
+  .show {
+    visibility: visible;
+  }
+  
+  /* -- End of Code for the Cookie Compliance popover window -- */

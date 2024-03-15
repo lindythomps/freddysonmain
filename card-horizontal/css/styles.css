@@ -1,0 +1,78 @@
+:root {
+    --nunito: 2rem/1.5 "Nunito", Helvetica, sans-serif;
+    --dark-blue: #343854;
+    --card-body-color: #F2E9E4;
+    --box-shadow: 0 0 10px 0 rgba(33 33 33 / 15%);
+}
+
+body {
+    font: var(--nunito);
+}
+
+/* Typographical Styles */
+h2 {
+    text-align: center;
+    font-weight: bold;
+}
+
+/* *** Utility Classes *** */
+
+.sr-only {
+    position:absolute;
+    left:-10000px;
+    top:auto;
+    width:1px;
+    height:1px;
+    overflow:hidden;
+    }
+
+    .flex-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    section {
+        padding: 2rem;
+    }
+
+    /* Cards */
+    .card-deck {
+        padding: 2rem;
+    }
+    
+    .card-container {
+        background-color: var(--dark-blue);
+        color: var(--card-body-color);
+        border: 1px solid #666;
+        border-radius: 3px;
+        box-shadow: 5px 5px 5px #666;
+        margin-bottom: 2rem;
+        padding: 1rem;
+    }
+    
+    .card-container h3 {
+        font-size: 2rem;
+        font-weight: 300;
+        padding: 0.5rem;
+        text-align: center;
+    }
+    
+    /* Media Queries */
+    @media screen and (min-width: 540px) {
+    
+        .card-deck {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-direction: column;
+        }
+
+        .flex-container {
+            flex-direction: row;
+        }
+    
+    }
+    
+    
